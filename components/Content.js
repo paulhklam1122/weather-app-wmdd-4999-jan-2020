@@ -1,16 +1,16 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-const Content = () => (
+const Content = (props) => (
   <View style={styles.content}>
     <View>
-      <Text style={styles.temp}>25&#8451;</Text>
+      <Text style={styles.temp}>{props.temp}&#8451;</Text>
     </View>
     <View>
-      <Text style={styles.cityName}>Vancouver</Text>
+      <Text style={styles.cityName}>{props.city}</Text>
     </View>
     <View>
-      <Text style={styles.countryName}>CA</Text>
+      <Text style={styles.countryName}>{props.country}</Text>
     </View>
   </View>
 )

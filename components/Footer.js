@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native'
 
 import moment from 'moment'
 
-const Footer = () => (
+const Footer = (props) => (
   <View style={styles.footer}>
     <View style={{ justifyContent:'center', alignItems: 'center', flex: 1 }}>
       <Text style={{ fontSize: 15, color: 'red', paddingBottom: 20, backgroundColor: 'transparent'}}>
@@ -16,7 +16,7 @@ const Footer = () => (
           Pressure
         </Text>
         <Text style={{fontSize: 30, backgroundColor: 'transparent'}}>
-          50
+          {props.pressure}
         </Text>
       </View>
       <View style={{flex: 1}}>
@@ -24,7 +24,7 @@ const Footer = () => (
           Wind Speed
         </Text>
         <Text style={{fontSize: 30, backgroundColor: 'transparent'}}>
-          60
+          {props.windSpeed}
         </Text>
       </View>
       <View style={{flex: 1}}>
@@ -32,7 +32,7 @@ const Footer = () => (
           Min Temp
         </Text>
         <Text style={{fontSize: 30, backgroundColor: 'transparent'}}>
-          15
+          {props.minTemp}
         </Text>
       </View>
     </View>

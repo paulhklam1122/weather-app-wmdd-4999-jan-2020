@@ -5,6 +5,7 @@ const Form = (props) => (
   <View style={styles.header}>
     <TextInput
       onChangeText={props.onChangeText}
+      onEndEditing={props.onSubmit}
       style={styles.textInput}
     />
   </View>
